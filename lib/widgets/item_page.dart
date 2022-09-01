@@ -128,24 +128,20 @@ class _ItemInfo extends StatelessWidget {
       padding: EdgeInsets.all(20.0),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         _itemNameWrapper(),
-        Column(
-          children: [
-            _ItemDetailsBadges(),
-            _ItemStickersWrapper(),
-            _ItemFloatValueWrapper(),
-            _ItemMiscInformation(),
-            _ItemCollectionWrapper(),
-            _ItemOverpayWrapper(),
-            //График в процессе, тот что получился изначально не понравился, поэтому пока placeholder
-            _ItemPriceGraph(),
-            _ItemCompilatonWrapper(),
-            //За это можно бить по рукам, я хз как заставить SingleChildScrollView заставить листаться дальше
-            // на 125 пикселей чем контент, чтобы боттом бар подборки не закрывал
-            Container(
-              height: 125,
-              margin: EdgeInsets.only(top: 30),
-            )
-          ],
+        _ItemDetailsBadges(),
+        _ItemStickersWrapper(),
+        _ItemFloatValueWrapper(),
+        _ItemMiscInformation(),
+        _ItemCollectionWrapper(),
+        _ItemOverpayWrapper(),
+        //График в процессе, тот что получился изначально не понравился, поэтому пока placeholder
+        _ItemPriceGraph(),
+        _ItemCompilatonWrapper(),
+        //За это можно бить по рукам, я хз как заставить SingleChildScrollView заставить листаться дальше
+        // на 125 пикселей чем контент, чтобы боттом бар подборки не закрывал
+        Container(
+          height: 125,
+          margin: EdgeInsets.only(top: 30),
         )
       ]),
     );
