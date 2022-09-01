@@ -126,8 +126,9 @@ class _ItemInfo extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(20))),
       width: double.infinity,
       padding: EdgeInsets.all(20.0),
+      // ignore: prefer_const_literals_to_create_immutables
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        _itemNameWrapper(),
+        _ItemNameWrapper(),
         _ItemDetailsBadges(),
         _ItemStickersWrapper(),
         _ItemFloatValueWrapper(),
@@ -137,11 +138,8 @@ class _ItemInfo extends StatelessWidget {
         //График в процессе, тот что получился изначально не понравился, поэтому пока placeholder
         _ItemPriceGraph(),
         _ItemCompilatonWrapper(),
-        //За это можно бить по рукам, я хз как заставить SingleChildScrollView заставить листаться дальше
-        // на 125 пикселей чем контент, чтобы боттом бар подборки не закрывал
-        Container(
+        SizedBox(
           height: 125,
-          margin: EdgeInsets.only(top: 30),
         )
       ]),
     );
@@ -270,8 +268,8 @@ class _ItemOverpayWrapper extends StatelessWidget {
   }
 }
 
-class _itemNameWrapper extends StatelessWidget {
-  const _itemNameWrapper({
+class _ItemNameWrapper extends StatelessWidget {
+  const _ItemNameWrapper({
     Key? key,
   }) : super(key: key);
 
